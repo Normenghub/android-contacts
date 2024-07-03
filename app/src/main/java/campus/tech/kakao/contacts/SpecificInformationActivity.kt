@@ -41,6 +41,12 @@ class SpecificInformationActivity : AppCompatActivity() {
             }
             textView.text = " ${fieldName} : ${text}"
             textView.visibility = View.VISIBLE
+            if(fieldName == "Birth" && text == "생일"){
+                textView.visibility = View.GONE
+            }
+            if(fieldName == "Gender" && text == "null"){
+                textView.visibility = View.GONE
+            }
         } else {
             textView.visibility = View.GONE
         }
