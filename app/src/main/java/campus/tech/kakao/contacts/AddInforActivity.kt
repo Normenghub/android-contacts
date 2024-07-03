@@ -48,7 +48,7 @@ class AddInforActivity : AppCompatActivity() {
             removeMoreInformationButton(forMoreInformation)
         }
         saveButton.setOnClickListener {
-            saveOrNotSave(saveData(inputName, inputPhoneNumber, inputEmail,"save"), saveButton)
+            saveOrNotSave(saveData(inputName, inputPhoneNumber, inputEmail,"save"))
             if (saveData(inputName, inputPhoneNumber, inputEmail,"save")) {
                 val resultIntent = Intent().apply {
                     putExtra("inforname", addName)
@@ -65,11 +65,11 @@ class AddInforActivity : AppCompatActivity() {
         }
 
         cancelButton.setOnClickListener {
-            if (saveData(inputName, inputPhoneNumber, inputEmail,"cancel")) {
+            if (saveData(inputName, inputPhoneNumber, inputEmail,"cancel")){
                 alertDialog(this)
 
             } else {
-                cancelMessasge(cancelButton)
+                cancelMessasge()
                 finish()
             }
 
@@ -89,15 +89,15 @@ class AddInforActivity : AppCompatActivity() {
         birthTextView = null
     }
 
-    private fun saveMessage(saveButton: Button) {
+    private fun saveMessage() {
         Toast.makeText(this, "저장이 완료 되었습니다.", Toast.LENGTH_SHORT).show()
     }
 
-    private fun emptyDatamassage(saveButton: Button) {
+    private fun emptyDatamassage() {
         Toast.makeText(this, "이름과 전화번호는 필수 값입니다.", Toast.LENGTH_SHORT).show()
     }
 
-    private fun cancelMessasge(cancelButton: Button) {
+    private fun cancelMessasge() {
         Toast.makeText(this, "취소 되었습니다.", Toast.LENGTH_SHORT).show()
     }
 
@@ -263,16 +263,13 @@ class AddInforActivity : AppCompatActivity() {
             else -> false
         }
     }
-
-
-    private fun saveOrNotSave(checking: Boolean, saveButton: Button) {
+    private fun saveOrNotSave(checking: Boolean) {
         if (checking) {
-            saveMessage(saveButton)
+            saveMessage()
         } else {
-            emptyDatamassage(saveButton)
+            emptyDatamassage()
         }
     }
-
     fun alertDialog(context: Context) {
         val builder = AlertDialog.Builder(context)
         builder.setTitle("타이틀 입니다.")
