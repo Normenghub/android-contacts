@@ -91,15 +91,15 @@ class AddInforActivity : AppCompatActivity() {
     }
 
     private fun saveMessage(saveButton: Button) {
-        Toast.makeText(saveButton.context, "저장이 완료 되었습니다.", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "저장이 완료 되었습니다.", Toast.LENGTH_SHORT).show()
     }
 
     private fun emptyDatamassage(saveButton: Button) {
-        Toast.makeText(saveButton.context, "이름과 전화번호는 필수 값입니다.", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "이름과 전화번호는 필수 값입니다.", Toast.LENGTH_SHORT).show()
     }
 
     private fun cancelMessasge(cancelButton: Button) {
-        Toast.makeText(cancelButton.context, "취소 되었습니다.", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "취소 되었습니다.", Toast.LENGTH_SHORT).show()
     }
 
     private fun createSelectBirth(context: Context, hint: String): TextView {
