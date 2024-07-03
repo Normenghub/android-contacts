@@ -19,17 +19,17 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 
-private var addName: String = ""
-private var addPhoneNumber: String = ""
-private var addEmail: String = ""
-private var addBirth: String = ""
-private var addMemo: String = ""
-private var addGender: String = ""
-private var memoEditText: EditText? = null
-private var genderRadioGroup: RadioGroup? = null
-private var birthTextView: TextView? = null
-class AddInfor : AppCompatActivity() {
 
+class AddInfor : AppCompatActivity() {
+    private var addName: String = ""
+    private var addPhoneNumber: String = ""
+    private var addEmail: String = ""
+    private var addBirth: String = ""
+    private var addMemo: String = ""
+    private var addGender: String = ""
+    private var memoEditText: EditText? = null
+    private var genderRadioGroup: RadioGroup? = null
+    private var birthTextView: TextView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_infor)
@@ -73,7 +73,21 @@ class AddInfor : AppCompatActivity() {
                 startActivity(toMain)
                 finish()
             }
+
         }
+
+    }
+
+    private fun clearGlobalVariables() {
+        addName = ""
+        addPhoneNumber = ""
+        addEmail = ""
+        addBirth = ""
+        addMemo = ""
+        addGender = ""
+        memoEditText = null
+        genderRadioGroup = null
+        birthTextView = null
     }
 
     private fun saveMessage(saveButton: Button) {
@@ -286,15 +300,4 @@ class AddInfor : AppCompatActivity() {
                 })
         builder.show()
     }
-}
-private fun clearGlobalVariables() {
-    addName = ""
-    addPhoneNumber = ""
-    addEmail = ""
-    addBirth = ""
-    addMemo = ""
-    addGender = ""
-    memoEditText = null
-    genderRadioGroup = null
-    birthTextView = null
 }
