@@ -66,11 +66,10 @@ class AddInforActivity : AppCompatActivity() {
 
         cancelButton.setOnClickListener {
             if (saveData(inputName, inputPhoneNumber, inputEmail,"cancel")) {
-                alertDialog(this, toMain)
+                alertDialog(this)
 
             } else {
                 cancelMessasge(cancelButton)
-                startActivity(toMain)
                 finish()
             }
 
@@ -274,7 +273,7 @@ class AddInforActivity : AppCompatActivity() {
         }
     }
 
-    fun alertDialog(context: Context, intent: Intent) {
+    fun alertDialog(context: Context) {
         val builder = AlertDialog.Builder(context)
         builder.setTitle("타이틀 입니다.")
             .setMessage("작성하시던 내용이 있습니다.")
