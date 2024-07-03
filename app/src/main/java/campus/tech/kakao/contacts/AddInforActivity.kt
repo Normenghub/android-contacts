@@ -292,7 +292,7 @@ class AddInforActivity : AppCompatActivity() {
             .setMessage("작성하시던 내용이 있습니다.")
             .setPositiveButton("취소하기",
                 DialogInterface.OnClickListener { dialog, id ->
-                    context.startActivity(intent)
+                    finish()
 
                 })
             .setNegativeButton("돌아가기",
