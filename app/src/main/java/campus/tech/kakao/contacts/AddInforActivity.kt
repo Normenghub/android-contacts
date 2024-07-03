@@ -20,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 
 
-class AddInfor : AppCompatActivity() {
+class AddInforActivity : AppCompatActivity() {
     private var addName: String = ""
     private var addPhoneNumber: String = ""
     private var addEmail: String = ""
@@ -40,7 +40,7 @@ class AddInfor : AppCompatActivity() {
         val cancelButton = findViewById<Button>(R.id.cancelButton)
         val inputName = findViewById<EditText>(R.id.inputName)
         val inputPhoneNumber = findViewById<EditText>(R.id.inputPhoneNumber)
-        val toMain = Intent(this@AddInfor, MainActivity::class.java)
+        val toMain = Intent(this@AddInforActivity, MainActivity::class.java)
         forMoreInformation.setOnClickListener {
             moreInformationBirth(this, addInfor)
             moreInformationGender(this, addInfor)

@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             }
         val addInfor = findViewById<Button>(R.id.imageButton)
         addInfor.setOnClickListener {
-            val toAddInfor = Intent(this@MainActivity, AddInfor::class.java)
+            val toAddInfor = Intent(this@MainActivity, AddInforActivity::class.java)
             addInforLauncher.launch(toAddInfor)
         }
 
